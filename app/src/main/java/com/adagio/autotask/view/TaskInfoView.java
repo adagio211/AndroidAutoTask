@@ -1,10 +1,8 @@
 package com.adagio.autotask.view;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -91,9 +89,7 @@ public class TaskInfoView extends RelativeLayout {
             currentTask.reorderActions();
             refreshActionList(currentTask);
         });
-        actionListAdapter.setEditClickListener(action -> {
-            DialogUtil.createActionParamDialog(getContext(), action, currentTask);
-        });
+        actionListAdapter.setEditClickListener(action -> DialogUtil.createActionParamDialog(getContext(), action, currentTask));
         return actionListAdapter;
     }
 
@@ -111,17 +107,17 @@ public class TaskInfoView extends RelativeLayout {
         binding.taskSaveBtn.setOnClickListener(v -> {
             fillTaskData(currentTask);
             if (currentTask.getTaskName() == null || currentTask.getTaskName().trim().equals("")) {
-                ToastUtil.createToast(getContext(), "任务名称必须填写", Toast.LENGTH_LONG);
+                ToastUtil.createToast("任务名称必须填写");
                 return;
             }
             if (currentTask.getId() == null && taskService.selectCountTask(currentTask.getTaskName()) > 0) {
-                ToastUtil.createToast(getContext(), "任务名称[" + currentTask.getTaskName() + "]重复", Toast.LENGTH_LONG);
+                ToastUtil.createToast("任务名称[" + currentTask.getTaskName() + "]重复");
                 return;
             }
             // 一直执行
             if (currentTask.getIsAlwaysExecution() != 1) {
                 if (currentTask.getExecutionTimes() == 0) {
-                    ToastUtil.createToast(getContext(), "执行次数必填或者是选择一直执行", Toast.LENGTH_LONG);
+                    ToastUtil.createToast("执行次数必填或者是选择一直执行");
                     return;
                 }
             }
@@ -155,9 +151,13 @@ public class TaskInfoView extends RelativeLayout {
             fillTaskData(currentTask);
 
             // 选择新的action弹框
-            if (AutoTaskApplication.getScreenFocusView() == null) {
-                AutoTaskApplication.setScreenFocusView(new ScreenFocusView(getContext(), currentTask));
+            ScreenFocusView screenFocusView = AutoTaskApplication.getScreenFocusView();
+            if (screenFocusView == null) {
+                screenFocusView = new ScreenFocusView(getContext(), currentTask);
+                AutoTaskApplication.setScreenFocusView(screenFocusView);
+                ToastUtil.createToast("使用屏幕中间十字进行定位");
             }
+
             DialogUtil.dismissTaskDialog(getContext());
             DialogUtil.dismissAppMainDialog(getContext());
         });

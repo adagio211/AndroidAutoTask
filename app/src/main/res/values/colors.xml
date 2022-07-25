@@ -14,4 +14,6 @@
     <color name="black_80_transparent">#B3000000</color>
     <color name="green">#07C160</color>
     <color name="red">#F44336</color>
+    <color name="shadow">#cc222222</color>
+    <color name="transparent">#00000000</color>
 </resources>
