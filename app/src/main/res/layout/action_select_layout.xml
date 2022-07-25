@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:scrollbarSize="0dp"
+        android:paddingBottom="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="true"
+            android:orientation="vertical"
+            android:padding="10dp">
+            <!--    <Button
+                    android:id="@+id/execution_btn"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:textSize="12sp"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/execute"/>-->
+
+            <Button
+                android:id="@+id/action_add_tap_btn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:drawableStart="@drawable/ic_gesture_tap"
+                android:gravity="left"
+                android:padding="10dp"
+                android:tag="@string/tag_action_tap"
+                android:text="@string/addTapPointer"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/action_add_long_tap_btn"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:drawableStart="@drawable/ic_gesture_1f_long_tap"
+                android:gravity="left"
+                android:padding="10dp"
+                android:tag="@string/tag_action_long_tap"
+                android:text="@string/addLongTapPointer"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/action_add_left_btn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:drawableStart="@drawable/ic_gesture_1f_swipe_left"
+                android:gravity="left"
+                android:padding="10dp"
+                android:tag="@string/tag_action_swipe_left"
+                android:text="@string/addLeftPointer"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/action_add_right_btn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:drawableStart="@drawable/ic_gesture_1f_swipe_right"
+                android:gravity="left"
+                android:padding="10dp"
+                android:tag="@string/tag_action_swipe_righ"
+                android:text="@string/addRightPointer"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/action_add_up_btn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:drawableStart="@drawable/ic_gesture_1f_swipe_up"
+                android:gravity="left"
+                android:padding="10dp"
+                android:tag="@string/tag_action_swipe_up"
+                android:text="@string/addUpPointer"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/action_add_down_btn"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:drawableStart="@drawable/ic_gesture_1f_swipe_down"
+                android:gravity="left"
+                android:padding="10dp"
+                android:tag="@string/tag_action_swipe_down"
+                android:text="@string/addDownPointer"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <!--    <Button
+                    android:id="@+id/delete_all_pointers_btn"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:textSize="12sp"
+                    android:text="@string/clean"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"/>-->
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Action save button -->
+    <Button
+        android:id="@+id/action_select_cancel_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/design_default_color_secondary"
+        android:padding="5dp"
+        android:text="@string/cancel_task"
+        android:textColor="@color/white" />
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="12dp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <Button
+            android:id="@+id/action_select_cancel_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="50"
+            android:background="@color/design_default_color_secondary"
+            android:padding="5dp"
+            android:text="@string/cancel_task"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/action_select_save_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="50"
+            android:background="@color/design_default_color_primary"
+            android:padding="5dp"
+            android:text="@string/save_task"
+            android:textColor="@color/white" />
+    </LinearLayout>-->
+
+</RelativeLayout>

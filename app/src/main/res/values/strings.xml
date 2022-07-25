@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">TabAutoClickTest</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="clicktobegin">ClickToBegin</string>
+    <string name="motion">motion</string>
+    <string name="stop">stop</string>
+
+    <string name="accessibility_service_label">Accessibility</string>
+    <string name="app_accessibility_description">任务自动化执行</string>
+    <string name="clickTest">ClickTest</string>
+    <string name="goback">BACK</string>
+    <string name="gohome">HOME</string>
+    <string name="execute">EXECUTE</string>
+    <string name="delete">DELETE</string>
+    <string name="clean">CLEANDATA</string>
+    <string name="addTapPointer">点击</string>
+    <string name="addLeftPointer">左滑动</string>
+    <string name="addRightPointer">右滑动</string>
+    <string name="float_toucher_view">Float Toucher View</string>
+    <string name="edit">EDIT_TASK</string>
+    <string name="del">TASK_DEL</string>
+    <string name="add_new_task">新任务</string>
+    <string name="save_task">保存</string>
+    <string name="task_name_label">任务名：</string>
+    <string name="task_describe_label">描述：</string>
+    <string name="cancel_task">取消</string>
+    <string name="task_execution_times_label">执行次数：</string>
+    <string name="task_add_new_action">新动作</string>
+    <string name="always_execution">一直执行</string>
+    <string name="tag_action_tap">tagActionTap</string>
+    <string name="tag_action_swipe_left">tagActionSwipeLeft</string>
+    <string name="tag_action_swipe_righ">tagActionSwipeRight</string>
+    <string name="tag_action_swipe_up">tagActionSwipeUp</string>
+    <string name="tag_action_swipe_down">tagActionSwipeDown</string>
+    <string name="addUpPointer">上滑动</string>
+    <string name="addDownPointer">下滑动</string>
+    <string name="addLongTapPointer">长按</string>
+    <string name="tag_action_long_tap">tagActionLongTap</string>
+    <string name="action_name_label">名称</string>
+    <string name="action_delay_label">延迟(毫秒)</string>
+    <string name="action_order_label">执行序号</string>
+    <string name="number_zero">0</string>
+    <string name="unstart">未开始</string>
+    <string name="action_focus_description">ActionFocusFloatingView</string>
+    <string name="main_view_title">选择TASK执行</string>
+    <string name="main_view_close_btn_description">关闭按钮</string>
+    <string name="default_execution_delay_time">1000</string>
+</resources>
